@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= image_tag(@user.avatar_url, size: "16x16", alt: "Mon avatar") if @user.avatar.present? %>
+</p>
+
+<%= link_to 'Editer', edit_user_path(@user) %> |
+<%= link_to 'Retour', users_path %>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Proj03</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% if user_signed_in? %>
+      <ul class="nav navbar-nav navbar-right">
+            <li>
+                <%= link_to "Accueil", posts_path %>
+            </li>
+            <li>
+                <%= link_to "Créer un post", new_post_path %>
+            </li>
+            <li>
+                <%= link_to "Compte",  edit_user_registration_path %>
+            </li>
+            <li>
+                <%= link_to "Deconnexion",  destroy_user_session_path, :method => :delete %>
+            </li>
+          </ul>
+  <% else %>
+            <ul class="nav navbar-nav pull-right">
+              <li>
+                  <%= link_to "S'inscrire",  new_user_registration_path %>
+              </li>
+              <li>
+                  <%= link_to "Connexion",  new_user_session_path %>
+              </li>
+            </ul>
+  <% end %>
+  <!-- <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p> -->
+  <div class="message"> <%= flash_messages %></div>
+
+  <div class="container">
+    <%= yield %>
+    </div>
+
+    <footer>
+	    <div class="container">
+	        Simplon 2015
+          <p class="sign_in"> <%= link_to 'Gerer les utilisateurs', users_path %></p>
+	    </div>
+    </footer>
+</body>
+</html>
