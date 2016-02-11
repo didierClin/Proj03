@@ -183,11 +183,11 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
-  bootstrap-sass (~> 3.3, >= 3.3.5.1)
+  bootstrap-sass
   byebug
-  carrierwave (~> 0.10.0)
+  carrierwave
   coffee-rails (~> 4.1.0)
-  devise (~> 3.5, >= 3.5.6)
+  devise
   jbuilder (~> 2.0)
   jquery-rails
   pg

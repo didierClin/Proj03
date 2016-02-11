@@ -22,9 +22,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'devise', '~> 3.5', '>= 3.5.6'
-gem 'carrierwave', '~> 0.10.0'
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
+gem 'devise'
+gem 'carrierwave'
+gem 'bootstrap-sass'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -40,7 +40,5 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
 
 end
-group :production do
   gem 'pg'
   gem 'rails_12factor'
-end
