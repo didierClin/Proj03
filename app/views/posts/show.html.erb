@@ -1,19 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nom:</strong>
   <%= @post.name %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>Contenu:</strong>
   <%= @post.content %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @post.user %>
+  <strong>Utilisateur:</strong>
+  <%= @post.user.name %>
+</p>
+<p>
+  <td><%= image_tag(@post.user.avatar_url, size: "25x25", alt: "Mon avatar") if @post.user.avatar.present? %> </td>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Editer', edit_post_path(@post) %> |
+<%= link_to 'Retour', posts_path %>

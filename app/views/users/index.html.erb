@@ -16,8 +16,7 @@
       <tr>
 
         <td><%= user.name %></td>
-        <td><%= user.avatar %></td>
-        <td><%= image_tag(user.avatar_url, size: "16x16", alt: "Mon avatar") if user.avatar.present? %> </td>
+        <td><%= image_tag(user.avatar_url, size: "25x25", alt: "Mon avatar") if user.avatar.present? %> </td>
         <td><%= link_to 'Afficher', user %></td>
         <td><%= link_to 'Editer', edit_user_path(user) %></td>
         <td><%= link_to 'Supprimer', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
